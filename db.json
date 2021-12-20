@@ -1,19 +1,16 @@
 {
-  "posts": [
+  "tasks": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "id": 4,
+      "text": "Going for Yoga",
+      "day": "May 8th at 2:30pm",
+      "reminder": true
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "id": 5,
+      "text": "Clubbing",
+      "day": "May 9th at 2:30pm",
+      "reminder": true
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }

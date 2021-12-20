@@ -8,13 +8,17 @@ import {TASKS} from '../mock-tasks';
   providedIn: 'root'
 })
 export class TasksService {
-  private apiUrl = 'http//localhost:5000/tasks';
+  private apiUrl = 'http://localhost:5000/tasks';
 
   constructor(private http:HttpClient) { }
 
   getTasks(): Observable<task[]>{
-   return this.http.get<task[]>(this.apiUrl);
+    console.log("Inside service get task")
+   return this.http.get<task[]>("http://localhost:5000/tasks");
   }
+  deleteTask(task: task): Observable<task> {
+    const url = `${this.apiUrl}/${task.id}`;
+    return this.http.delete<task>(url);
 }
 
-
+}
